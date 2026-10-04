@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import Personalizador from "../Personalizador/Personalizador";
 
 const HeroPrincipal = () => {
-  return (
+    const [colorElegido, setColorElegido] = useState("#0d6efd");
+    
+    return (
     <section id="inicio" className="py-5">
       <Container>
         <Row className="align-items-center g-4">
@@ -17,10 +21,23 @@ const HeroPrincipal = () => {
               práctica lo que aprendés.
             </p>
 
-            <Button variant="primary" href="#recursos">
-              Explorar recursos
-            </Button>
-          </Col>
+            <div className="d-flex gap-2 flex-wrap">
+                <Button
+                    href="#recursos"
+                    style={{
+                        backgroundColor: colorElegido,
+                        borderColor: colorElegido,
+                    }}
+                >
+                Explorar recursos
+                </Button>
+
+                <Personalizador
+                    colorElegido={colorElegido}
+                    onCambiarColor={setColorElegido}
+                />
+                </div>
+                </Col>
 
           <Col md={5}>
             <div className="border rounded-4 p-4 shadow-sm">
