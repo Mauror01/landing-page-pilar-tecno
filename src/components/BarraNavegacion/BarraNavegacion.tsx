@@ -12,7 +12,6 @@ const BarraNavegacion = () => {
           <Nav className="ms-auto">
             <Nav.Link href="#inicio">Inicio</Nav.Link>
             <Nav.Link href="#recursos">Recursos</Nav.Link>
-            <Nav.Link href="#nosotros">Sobre nosotros</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
